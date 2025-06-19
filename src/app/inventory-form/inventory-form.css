@@ -1,0 +1,15 @@
+.inventory-add-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+
+  .form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+  }
+}

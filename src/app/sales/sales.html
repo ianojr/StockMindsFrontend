@@ -1,0 +1,56 @@
+<div class="sales-container">
+
+  <h2 class="mb-4">Sales</h2>
+
+  <!-- 🔍 Search and ➕ Add Sale Button -->
+  <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+    <mat-form-field appearance="outline" class="search-box">
+      <mat-label>Search Sales</mat-label>
+      <input matInput placeholder="Search by product..." />
+    </mat-form-field>
+
+    <button mat-flat-button color="primary">
+      <mat-icon class="me-2">add</mat-icon> Add Sale
+    </button>
+  </div>
+
+  <!-- 📊 Sales Table -->
+  <mat-card>
+    <mat-table class="mat-elevation-z2">
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+        <mat-cell *matCellDef="let sale">1</mat-cell>
+      </ng-container>
+
+      <!-- Product -->
+      <ng-container matColumnDef="product">
+        <mat-header-cell *matHeaderCellDef>Product</mat-header-cell>
+        <mat-cell *matCellDef="let sale">Laptop</mat-cell>
+      </ng-container>
+
+      <!-- Quantity -->
+      <ng-container matColumnDef="quantity">
+        <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
+        <mat-cell *matCellDef="let sale">2</mat-cell>
+      </ng-container>
+
+      <!-- Total -->
+      <ng-container matColumnDef="total">
+        <mat-header-cell *matHeaderCellDef>Total (KES)</mat-header-cell>
+        <mat-cell *matCellDef="let sale">KES 156,000</mat-cell>
+      </ng-container>
+
+      <!-- Date -->
+      <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+        <mat-cell *matCellDef="let sale">2025-06-15</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="['id', 'product', 'quantity', 'total', 'date']"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: ['id', 'product', 'quantity', 'total', 'date']"></mat-row>
+
+    </mat-table>
+  </mat-card>
+</div>

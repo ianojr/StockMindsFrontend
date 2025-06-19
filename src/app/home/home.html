@@ -1,0 +1,557 @@
+<div class="body">
+    <!-- Navbar Section -->
+    <nav class="cool-navbar">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#"
+                class="text-white text-3xl font-extrabold tracking-wide rounded-lg p-2 transition-transform duration-300 hover:scale-105">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-blue-400">
+                    StockMinds
+                </span>
+            </a>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button"
+                class="lg:hidden text-white focus:outline-none p-2 rounded-md transition-all duration-300 ease-in-out">
+                <span class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300 ease-in-out top-bar"></span>
+                <span class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300 ease-in-out middle-bar"></span>
+                <span class="block w-6 h-0.5 bg-white transition-all duration-300 ease-in-out bottom-bar"></span>
+            </button>
+
+            <!-- Navigation Links (Desktop) -->
+            <div class="hidden lg:flex items-center space-x-6" id="desktop-nav">
+                <a href="#" class="nav-link active" aria-current="page">Home</a>
+                <a href="#" class="nav-link">Features</a>
+                <a href="#" class="nav-link">Pricing</a>
+                <a href="#" class="nav-link">About Us</a>
+                <a href="#" class="nav-link">Contact</a>
+                <a routerLink="/login" class="btn btn-secondary rounded-full px-6 py-2 shadow-lg">Log In</a>
+                <a routerLink="/register" class="btn btn-primary rounded-full px-6 py-2 shadow-lg">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-blue-800 w-full mt-4 py-4 rounded-b-lg">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="#" class="nav-link active w-full text-center py-2">Home</a>
+                <a href="#" class="nav-link w-full text-center py-2">Features</a>
+                <a href="#" class="nav-link w-full text-center py-2">Pricing</a>
+                <a href="#" class="nav-link w-full text-center py-2">About Us</a>
+                <a href="#" class="nav-link w-full text-center py-2">Contact</a>
+                <a routerLink="/login" class="btn btn-secondary rounded-full px-6 py-2 w-3/4 text-center">Log In</a>
+                <a routerLink="/register" class="btn btn-primary rounded-full px-6 py-2 w-3/4 text-center">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div
+        class="relative bg-gradient-to-br from-blue-500 to-indigo-600 text-white py-16 md:py-24 lg:py-32 overflow-hidden rounded-b-lg">
+        <!-- Optional: Background shapes/patterns for visual interest -->
+        <div class="absolute inset-0 z-0 opacity-10">
+            <svg class="h-full w-full" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 0 H100 V100 H0 Z M0 0 Q50 0 50 50 Q50 100 0 100 Z" fill="currentColor" opacity="0.1"></path>
+                <circle cx="20" cy="80" r="15" fill="currentColor" opacity="0.15"></circle>
+                <circle cx="80" cy="20" r="15" fill="currentColor" opacity="0.15"></circle>
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <!-- Content Left Side -->
+            <div class="text-center lg:text-left lg:w-1/2">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-md">
+                    Take Control of Your <span class="text-yellow-300">Inventory</span> with StockMinds
+                </h1>
+                <p class="text-lg md:text-xl mb-8 opacity-90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Simplify your workflow with modern inventory tools that enhance control, clarity, and business
+                    performance.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#"
+                        class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-green-500 hover:bg-green-600 transition-colors duration-300 transform hover:scale-105">
+                        Get Started Free
+                    </a>
+                    <a href="#"
+                        class="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-base font-medium rounded-full shadow-lg text-white hover:bg-white hover:text-blue-600 transition-colors duration-300 transform hover:scale-105">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image/Illustration Right Side -->
+            <div class="lg:w-1/2 mt-12 lg:mt-0 flex justify-center items-center">
+                <!-- Placeholder image/illustration -->
+                <img src="https://placehold.co/600x400/93c5fd/ffffff?text=Modern+Illustration" alt="Modern Illustration"
+                    class="max-w-full h-auto rounded-lg shadow-2xl transform transition-transform duration-500 hover:scale-105">
+            </div>
+        </div>
+    </div>
+    <section class="container mx-auto px-4 py-16">
+        <div
+            class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-center transform transition-transform duration-500 hover:scale-[1.01] hover:shadow-3xl">
+            <!-- Section Title with Gradient -->
+            <h2
+                class="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-800 leading-tight drop-shadow-md">
+                From Vision to Inventory Solution
+            </h2>
+            <!-- Description Paragraph -->
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto mb-10">
+                At <b>StockMinds</b>, we are a dedicated team passionate about building smart, efficient, and user-friendly
+                solutions that empower businesses to take full control of their inventory. Our mission is to simplify
+                stock management through powerful tools that boost accuracy, streamline operations, and support business
+                growth with ease and efficiency
+            </p>
+            <!-- Call to Action Button -->
+            <div class="flex justify-center">
+                <a href="#"
+                    class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-full shadow-lg text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Learn More About Us
+                    <!-- Optional: Add an icon here, e.g., using a simple SVG or Phosphor Icons if included -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription -->
+    <section class="container mx-auto px-4 py-16 bg-gray-50">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                Choose Your <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-800">Perfect
+                    Plan</span>
+            </h2>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                Find the ideal subscription that fits your needs, whether you're just starting out or looking for
+                advanced features.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+
+            <!-- Basic Plan Card -->
+            <div
+                class="bg-white rounded-2xl shadow-xl p-8 flex flex-col justify-between transition-all duration-300 transform hover:scale-[1.03] hover:shadow-2xl">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Basic</h3>
+                    <p class="text-gray-500 mb-6">For individuals and small teams.</p>
+                    <div class="text-5xl font-extrabold text-blue-700 mb-6">
+                        $19<span class="text-xl font-medium text-gray-500">/month</span>
+                    </div>
+                    <ul class="text-gray-700 mb-8 space-y-3">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Up to 5 Users
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Basic Analytics
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Email Support
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            No Advanced Reports
+                        </li>
+                    </ul>
+                </div>
+                <a href="#"
+                    class="block w-full text-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-300 transform hover:scale-105">
+                    Start Basic
+                </a>
+            </div>
+
+            <!-- Standard Plan Card (Highlighted) -->
+            <div
+                class="bg-white rounded-2xl shadow-2xl p-8 flex flex-col justify-between border-4 border-blue-600 transform scale-[1.02] relative transition-all duration-300 hover:scale-[1.05] hover:shadow-3xl">
+                <span
+                    class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-sm font-semibold px-4 py-1.5 rounded-full shadow-md">
+                    Most Popular
+                </span>
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Standard</h3>
+                    <p class="text-gray-600 mb-6">Perfect for growing businesses.</p>
+                    <div class="text-5xl font-extrabold text-blue-800 mb-6">
+                        $49<span class="text-xl font-medium text-gray-600">/month</span>
+                    </div>
+                    <ul class="text-gray-800 mb-8 space-y-3">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Up to 20 Users
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Advanced Analytics
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Priority Email Support
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Customizable Dashboards
+                        </li>
+                    </ul>
+                </div>
+                <a href="#"
+                    class="block w-full text-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105">
+                    Go Standard
+                </a>
+            </div>
+
+            <!-- Premium Plan Card -->
+            <div
+                class="bg-white rounded-2xl shadow-xl p-8 flex flex-col justify-between transition-all duration-300 transform hover:scale-[1.03] hover:shadow-2xl">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Premium</h3>
+                    <p class="text-gray-500 mb-6">For large enterprises and unlimited growth.</p>
+                    <div class="text-5xl font-extrabold text-blue-700 mb-6">
+                        $99<span class="text-xl font-medium text-gray-500">/month</span>
+                    </div>
+                    <ul class="text-gray-700 mb-8 space-y-3">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Unlimited Users
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Real-time AI Insights
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            24/7 Phone Support
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Dedicated Account Manager
+                        </li>
+                    </ul>
+                </div>
+                <a href="#"
+                    class="block w-full text-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-300 transform hover:scale-105">
+                    Go Premium
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Customer Feedback -->
+    <section class="container mx-auto px-4 py-16 bg-white">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                What Our <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-800">Customers
+                    Say</span>
+            </h2>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                Hear directly from individuals and businesses who have experienced the difference our platform makes.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Review Card 1 -->
+            <div
+                class="bg-gray-50 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl border border-gray-100">
+                <img src="https://placehold.co/80x80/6366f1/ffffff?text=JD" alt="John Doe"
+                    class="w-20 h-20 rounded-full object-cover mb-6 border-4 border-blue-400 shadow-md">
+                <p class="text-lg text-gray-700 italic mb-6 leading-relaxed">
+                    "Our productivity has soared since we started using this platform! The intuitive interface and
+                    powerful features are exactly what our team needed."
+                </p>
+                <h4 class="text-xl font-bold text-gray-900">John Doe</h4>
+                <p class="text-blue-600 text-md">CEO, Tech Innovators</p>
+                <div class="flex mt-3">
+                    <!-- Star Rating -->
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div
+                class="bg-gray-50 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl border border-gray-100">
+                <img src="https://placehold.co/80x80/6366f1/ffffff?text=JS" alt="Jane Smith"
+                    class="w-20 h-20 rounded-full object-cover mb-6 border-4 border-blue-400 shadow-md">
+                <p class="text-lg text-gray-700 italic mb-6 leading-relaxed">
+                    "The customer support is outstanding, and the features have truly transformed how we manage our
+                    projects. Highly recommend!"
+                </p>
+                <h4 class="text-xl font-bold text-gray-900">Jane Smith</h4>
+                <p class="text-blue-600 text-md">Marketing Director, Global Brands</p>
+                <div class="flex mt-3">
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div
+                class="bg-gray-50 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl border border-gray-100">
+                <img src="https://placehold.co/80x80/6366f1/ffffff?text=AK" alt="Alice Kim"
+                    class="w-20 h-20 rounded-full object-cover mb-6 border-4 border-blue-400 shadow-md">
+                <p class="text-lg text-gray-700 italic mb-6 leading-relaxed">
+                    "Simple, efficient, and incredibly effective. This platform has streamlined our entire workflow and
+                    boosted our team's collaboration significantly."
+                </p>
+                <h4 class="text-xl font-bold text-gray-900">Alice Kim</h4>
+                <p class="text-blue-600 text-md">Small Business Owner</p>
+                <div class="flex mt-3">
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Feedback Section -->
+    <section class="container mx-auto px-4 py-16 bg-gray-50">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                Share Your <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-800">Feedback</span>
+            </h2>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                We'd love to hear your thoughts, suggestions, or any issues you might have encountered. Your feedback
+                helps us improve!
+            </p>
+        </div>
+
+        <div
+            class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12 transition-all duration-300 transform hover:scale-[1.01] hover:shadow-2xl">
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-lg transition-all duration-200">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com"
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-lg transition-all duration-200">
+                </div>
+
+                <div>
+                    <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Your Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell us what you think..."
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-lg transition-all duration-200 resize-y"></textarea>
+                </div>
+
+                <div class="flex justify-center">
+                    <button type="submit"
+                        class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-full shadow-lg text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Send Feedback
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Column 1: Company Info -->
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <a href="#" class="text-3xl font-extrabold tracking-wide mb-4">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-blue-400">
+                        StockMinds
+                    </span>
+                </a>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Empowering your journey with innovative solutions and unparalleled support.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.253.15 4.792 1.488 4.937 4.938.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.85-1.149 3.253-2.487 4.792-4.938 4.937-1.266.058-1.644.069-4.849.069-3.205 0-3.584-.012-4.85-.07-3.254-.15-4.792-1.488-4.938-4.938-.058-1.265-.069-1.644-.069-4.849 0-3.204.012-3.584.07-4.85 1.149-3.253 2.487-4.792 4.938-4.938 1.265-.058 1.644-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.35 1.15-5.908 2.871-6.046 6.046-.059 1.28-.073 1.688-.073 4.947s.014 3.667.072 4.947c.138 3.175 1.696 4.896 6.046 6.046 1.28.058 1.688.073 4.947.073s3.667-.014 4.947-.072c3.175-.138 4.896-1.696 6.046-6.046.058-1.28.073-1.688.073-4.947s-.014-3.667-.072-4.947c-.138-3.175-1.696-4.896-6.046-6.046-1.28-.058-1.688-.073-4.947-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.444.647-1.444 1.444s.647 1.444 1.444 1.444 1.444-.647 1.444-1.444-.647-1.444-1.444-1.444z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.28 5.66c-.66.29-1.37.49-2.12.58.76-.46 1.34-1.18 1.62-2.04-.71.42-1.5.74-2.34.91-.67-.71-1.62-1.15-2.68-1.15-2.03 0-3.68 1.65-3.68 3.68 0 .29.03.57.08.84-3.06-.15-5.78-1.62-7.6-3.85-.32.55-.5.84-.5 1.4 0 1.28.65 2.4 1.64 3.06-.6-.02-1.1-.19-1.58-.43v.05c0 1.78 1.27 3.26 2.96 3.6-.31.08-.65.13-1 .04-.47-.11-.88-.28-1.28-.56.47 1.47 1.83 2.54 3.44 2.57-1.27 1-2.88 1.6-4.64 1.6-.3 0-.6-.02-.89-.06 1.64 1.05 3.59 1.66 5.69 1.66 6.83 0 10.56-5.65 10.56-10.56 0-.16-.01-.32-.01-.48.72-.52 1.35-1.17 1.84-1.92z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-8.5c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm7 8.5h-2v-3.5c0-1.5-.5-2.5-1.8-2.5-1 0-1.2.729-1.2 1.5v4.5h-2v-6h2v1.732c.6-.967 1.3-1.732 2.7-1.732 2 0 3 1.245 3 4v4.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h3 class="text-lg font-bold text-gray-200 mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Home</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Features</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Pricing</a>
+                    </li>
+                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">About
+                            Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services & Contact Info / Newsletter Combined -->
+            <div class="md:col-span-2 lg:col-span-1">
+                <!-- Services Sub-Column -->
+                <h3 class="text-lg font-bold text-gray-200 mb-4">Services</h3>
+                <ul class="space-y-2 mb-8"> <!-- Added mb-8 for spacing before next section -->
+                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Product
+                            Development</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">UI/UX
+                            Design</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Digital
+                            Marketing</a></li>
+                    <li><a href="#"
+                            class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Consulting</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Support</a>
+                    </li>
+                </ul>
+
+                <!-- Contact Info / Newsletter Sub-Column -->
+                <!-- <h3 class="text-lg font-bold text-gray-200 mb-3 text-center lg:text-left">Get In Touch</h3>
+            <p class="text-gray-400 text-sm mb-3 text-center lg:text-left">Stay updated with our latest news and offers!</p>
+            <form class="flex flex-col sm:flex-row gap-1.5">
+                <input type="email" placeholder="Your email address" class="flex-grow px-3 py-1.5 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <button type="submit" class="px-5 py-1.5 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
+                    Subscribe
+                </button>
+            </form> -->
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-500 text-sm">
+            &copy; 2024 Your Company Name. All rights reserved.
+        </div>
+    </footer>
+
+
+</div>

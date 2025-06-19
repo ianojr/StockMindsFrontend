@@ -1,0 +1,23 @@
+.dashboard-main-content {
+  padding: 2rem;
+  background: #f1f5f9;
+  min-height: calc(100vh - 64px);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card.kpi {
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+}
+
+.card.chart {
+  padding: 1rem;
+  background-color: white;
+}
