@@ -31,8 +31,8 @@ const routes: Routes = [
       { path: 'sales', component: Sales },
       { path: 'reports', component: Reports },
     ]
-  }
-  // { path: '', component: Home },
+  },
+  { path: '', component: Home },
 ];
 
 @NgModule({
