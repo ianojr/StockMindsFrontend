@@ -9,6 +9,8 @@ import { Inventory } from './inventory/inventory';
 import { InventoryForm } from './inventory-form/inventory-form';
 import { Sales } from './sales/sales';
 import { Reports } from './reports/reports';
+import { StockComponent } from './stock/stock';
+import { Logout } from './logout/logout';
 
 const routes: Routes = [
   { path: 'home', component: Home },
@@ -28,10 +30,12 @@ const routes: Routes = [
           { path: 'edit/:id', component: InventoryForm },
         ]
       },
+      { path: 'stock', component: StockComponent },
       { path: 'sales', component: Sales },
       { path: 'reports', component: Reports },
     ]
   },
+  { path: 'logout', component: Logout },
   { path: '', component: Home },
 ];
 

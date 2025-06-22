@@ -1,15 +1,23 @@
 <div class="body">
-    <div class="login-card">
+  <div class="login-card">
     <h2 class="text-center mb-4">Welcome to <strong>StockMinds</strong></h2>
     <form>
       <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="you@example.com">
+        <label for="username" class="form-label">Username</label>
+        <input [(ngModel)]="credentials.username" name="username" type="text" class="form-control" id="username"
+          placeholder="Enter your username">
       </div>
+
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter password">
+        <input [(ngModel)]="credentials.password" name="password" type="password" class="form-control" id="password"
+          placeholder="Enter password">
       </div>
+
+      <p class="text text-center text-danger">{{ message }}</p>
+
+
+
       <div class="d-flex justify-content-between mb-3">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="rememberMe">
@@ -17,8 +25,10 @@
         </div>
         <a href="#" class="text-decoration-none text-primary">Forgot Password?</a>
       </div>
-      <button type="submit" class="btn login-btn w-100">Login</button>
+
+      <button type="submit" (click)="login()" class="btn login-btn w-100">Login</button>
     </form>
+
     <div class="text-center mt-3">
       <p class="mb-0">Don't have an account? <a href="#" class="text-primary">Sign up</a></p>
     </div>

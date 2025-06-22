@@ -1,12 +1,7 @@
 <mat-sidenav-container class="sidenav-container">
-  
+
   <!-- LEFT Sidebar -->
-  <mat-sidenav
-    position="start"
-    mode="side"
-    opened
-    class="left-sidenav"
-  >
+  <mat-sidenav position="start" mode="side" opened class="left-sidenav">
     <div class="brand text-center mb-4">
       <h4 class="text-white">StockMinds</h4>
     </div>
@@ -18,6 +13,10 @@
       <a mat-list-item routerLink="/dashboard/inventory" routerLinkActive="active">
         <mat-icon>inventory_2</mat-icon>
         <span class="ms-2">Inventory</span>
+      </a>
+      <a mat-list-item routerLink="/dashboard/stock" routerLinkActive="active">
+        <mat-icon>edit</mat-icon>
+        <span class="ms-2">Stock</span>
       </a>
       <a mat-list-item routerLink="/dashboard/sales" routerLinkActive="active">
         <mat-icon>point_of_sale</mat-icon>
@@ -33,6 +32,7 @@
       </a>
     </mat-nav-list>
   </mat-sidenav>
+
 
   <!-- Main Content -->
   <mat-sidenav-content>

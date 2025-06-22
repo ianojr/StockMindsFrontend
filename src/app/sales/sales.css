@@ -1,19 +1,29 @@
-.sales-container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 1.5rem;
+.body {
+      background-color: #f9f9fb;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-  .search-box {
-    width: 300px;
-  }
+    .page-title {
+      margin-bottom: 2rem;
+    }
 
-  mat-table {
-    width: 100%;
-    margin-top: 1rem;
-  }
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
 
-  mat-header-cell, mat-cell {
-    padding: 12px;
-    font-size: 15px;
-  }
-}
+    .table th {
+      background-color: #f1f1f1;
+    }
+
+    .search-box {
+      max-width: 300px;
+    }
+
+    .action-icons i {
+      cursor: pointer;
+    }
+
+    .action-icons i:hover {
+      opacity: 0.8;
+    }

@@ -1,5 +1,7 @@
 import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { TokenInterceptor } from './interceptors/token-interceptor';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'; 
 
 // Angular Material
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -28,6 +30,9 @@ import { FormsModule } from '@angular/forms';
 import { InventoryForm } from './inventory-form/inventory-form';
 import { Sales } from './sales/sales';
 import { Reports } from './reports/reports';
+import { StockComponent } from './stock/stock';
+import { Logout } from './logout/logout';
+import { DashboardNavTop } from './dashboard-nav-top/dashboard-nav-top';
 
 @NgModule({
   declarations: [
@@ -41,11 +46,15 @@ import { Reports } from './reports/reports';
     InventoryForm,
     Sales,
     Reports,
+    StockComponent,
+    Logout,
+    DashboardNavTop,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
 
     // Charts Module
     NgChartsModule,
@@ -64,7 +73,9 @@ import { Reports } from './reports/reports';
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideClientHydration(), 
+      { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [App]
 })

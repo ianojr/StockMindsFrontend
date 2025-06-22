@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product';
+import { Product } from '../models/product';
 
 @Component({
   selector: 'app-inventory',
@@ -6,22 +8,32 @@ import { Component } from '@angular/core';
   templateUrl: './inventory.html',
   styleUrl: './inventory.css'
 })
-export class Inventory {
+export class Inventory implements OnInit {
   searchQuery: string = '';
+  inventory: Product[] = [];
+  filteredInventory: Product[] = [];
 
-  inventory = [
-    { name: 'Laptop', category: 'Electronics', quantity: 10, price: 78000 },
-    { name: 'Printer', category: 'Electronics', quantity: 5, price: 15000 },
-    { name: 'Notebooks', category: 'Stationery', quantity: 100, price: 50 },
-    { name: 'Pens', category: 'Stationery', quantity: 250, price: 15 }
-  ];
+  constructor(private productService: ProductService) {}
 
-  get filteredInventory() {
-    if (!this.searchQuery) return this.inventory;
-    return this.inventory.filter(item =>
-      item.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+  ngOnInit(): void {
+    this.productService.getAllProducts().subscribe({
+      next: (products) => {
+        this.inventory = products;
+        this.filteredInventory = products; // initial full list
+      },
+      error: (err) => console.error('Error fetching products:', err)
+    });
+  }
+
+  applyFilter(): void {
+    const query = this.searchQuery.trim().toLowerCase();
+    this.filteredInventory = this.inventory.filter(product =>
+      product.name.toLowerCase().includes(query)
     );
   }
 
-  displayedColumns = ['name', 'category', 'quantity', 'price', 'actions'];
+  clearSearch(): void {
+    this.searchQuery = '';
+    this.filteredInventory = this.inventory;
+  }
 }
