@@ -12,6 +12,8 @@ import { Reports } from './reports/reports';
 import { StockComponent } from './stock/stock';
 import { Logout } from './logout/logout';
 
+import { AuthGuard } from './auth-guard'; // adjust path if needed
+
 const routes: Routes = [
   { path: 'home', component: Home },
   { path: 'login', component: Login },
@@ -20,6 +22,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardNav, // ⬅️ Contains <mat-sidenav-container>
+    canActivate: [AuthGuard],
     children: [
       { path: '', component: Dashboard },
       {
