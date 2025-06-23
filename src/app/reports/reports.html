@@ -1,47 +1,59 @@
 <app-dashboard-nav-top></app-dashboard-nav-top>
 
 <div class="container py-4">
-    <h2 class="mb-4 fw-bold">Inventory Reports</h2>
+  <h2 class="mb-4 fw-bold">Inventory Reports</h2>
 
-    <!-- Summary Cards -->
-    <div class="row g-4 mb-4">
-      <div class="col-md-4">
-        <div class="card report-card p-3">
-          <h5 class="card-title"><i class="bi bi-cash-coin"></i>Total Sales</h5>
-          <p class="highlight-number">KES 305,000</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card report-card p-3">
-          <h5 class="card-title"><i class="bi bi-box-seam"></i>Products in Stock</h5>
-          <p class="highlight-number">120 Items</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card report-card p-3">
-          <h5 class="card-title"><i class="bi bi-exclamation-triangle-fill"></i>Low Stock Alerts</h5>
-          <p class="highlight-number text-danger">5 Products</p>
-        </div>
+  <!-- Summary Cards -->
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="card report-card p-3 shadow-sm">
+        <h5 class="card-title">
+          <i class="bi bi-cash-coin text-success"></i> Total Sales
+        </h5>
+        <p class="highlight-number fs-4 fw-bold text-primary">
+          KES {{ totalSales | number:'1.0-0' }}
+        </p>
       </div>
     </div>
 
-    <!-- Sales Chart -->
-    <div class="card p-4 mb-4 report-card">
-      <h5 class="section-title mb-3"><i class="bi bi-bar-chart-line-fill"></i> Monthly Sales Overview</h5>
-      <div class="chart-placeholder">
-        Chart Placeholder (Integrate with Chart.js or ng2-charts)
+
+    <div class="col-md-4">
+      <div class="card report-card p-3">
+        <h5 class="card-title"><i class="bi bi-box-seam"></i> Products in Stock</h5>
+        <p class="highlight-number">{{ totalStockItems }} Items</p>
       </div>
     </div>
 
-    <!-- Top Selling Products -->
-    <div class="card p-4 report-card">
-      <h5 class="section-title mb-3"><i class="bi bi-star-fill text-warning"></i>Top Selling Products</h5>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item d-flex justify-content-between">Laptop <span>50 units</span></li>
-        <li class="list-group-item d-flex justify-content-between">Printer <span>20 units</span></li>
-        <li class="list-group-item d-flex justify-content-between">USB Drives <span>15 units</span></li>
-      </ul>
+
+    <div class="col-md-4">
+      <div class="card report-card p-3">
+        <h5 class="card-title">
+          <i class="bi bi-exclamation-triangle-fill"></i> Low Stock Alerts
+        </h5>
+        <p class="highlight-number text-danger">{{ lowStockCount }} Products</p>
+      </div>
     </div>
   </div>
+
+  <!-- Recent products sold -->
+  <div class="card p-4 report-card">
+  <h5 class="section-title mb-3"><i class="bi bi-clock-history text-info"></i>Recently Sold Products</h5>
+  <ul class="list-group list-group-flush">
+    <li *ngFor="let sale of recentSales" class="list-group-item d-flex justify-content-between">
+      {{ sale.stock.product.name }} 
+      <span>{{ sale.quantity }} unit{{ sale.quantity > 1 ? 's' : '' }}</span>
+    </li>
+  </ul>
+</div>
+
+
+
+
+  <!-- Sales Chart -->
+  <div class="card p-4 mt-4 report-card">
+    <h5 class="section-title mb-3"><i class="bi bi-bar-chart-line-fill"></i> Monthly Sales Overview</h5>
+    <div class="chart-placeholder">
+      Chart Placeholder (Integrate with Chart.js or ng2-charts)
+    </div>
+  </div>
+</div>

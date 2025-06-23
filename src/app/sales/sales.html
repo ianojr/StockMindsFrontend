@@ -1,11 +1,85 @@
 <div class="body">
 
   <app-dashboard-nav-top></app-dashboard-nav-top>
-  
+
   <div class="container py-4">
+
+    <div class="container my-4">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">Record a Sale</h5>
+        </div>
+        <div class="card-body">
+          <form #saleForm="ngForm" (ngSubmit)="submitSale()">
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="product" class="form-label">Product</label>
+                <select class="form-select" id="product" [(ngModel)]="selectedStockId" name="product" (change)="onProductChange()">
+  <option *ngFor="let stock of stocks" [ngValue]="stock.id">
+    {{ stock.product.name }}
+  </option>
+</select>
+
+
+
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label">Price</label>
+                <div class="form-control bg-light" style="height: 38px; line-height: 28px;">
+                  {{ selectedPrice ? ('KES ' + selectedPrice) : 'Select a product' }}
+                </div>
+              </div>
+
+
+              <div class="col-md-3">
+                <label for="quantity" class="form-label">Quantity</label>
+                <!-- <input type="number" class="form-control" id="quantity" placeholder="1"> -->
+                <input type="number" class="form-control" id="quantity" [(ngModel)]="selectedQuantity" name="quantity"
+                  (input)="updateTotalPrice()" required>
+
+
+              </div>
+
+              <div class="col-md-6">
+                <label for="totalPrice" class="form-label">Total Price</label>
+                <!-- <input type="number" class="form-control" id="totalPrice" placeholder="Calculated automatically" readonly> -->
+                <input type="text" class="form-control" id="totalPrice" [value]="totalPrice ? 'KES ' + totalPrice : ''"
+                  readonly>
+
+              </div>
+
+              <!-- <div class="col-md-6">
+            <label for="soldBy" class="form-label">Sold By</label>
+            <input type="text" class="form-control" id="soldBy" placeholder="Enter username">
+          </div>
+
+          <div class="col-md-6">
+            <label for="time" class="form-label">Time</label>
+            <input type="datetime-local" class="form-control" id="time">
+          </div> -->
+
+              <div class="col-12 text-end mt-3">
+                <button type="submit" class="btn btn-success">
+                  <i class="bi bi-save me-1"></i> Save Sale
+                </button>
+                <button type="reset" class="btn btn-secondary ms-2">
+                  <i class="bi bi-x-circle me-1"></i> Cancel
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
     <!-- Page Header -->
     <div class="d-flex justify-content-between align-items-center page-title">
-      <h2 class="fw-bold">🧾 Sales Records</h2>
+      <h2 class="fw-bold">Sales Records</h2>
       <input type="text" class="form-control search-box" placeholder="Search by product...">
     </div>
 
@@ -38,9 +112,9 @@
               <td>{{ sale.sold_by.username }}</td>
               <td>{{ sale.time | date:'short' }}</td>
               <td class="text-center action-icons">
-                <i class="bi bi-pencil-square text-primary me-2"></i>
-                <i class="bi bi-trash text-danger"></i>
+                <i class="bi bi-pencil-square text-primary me-2" (click)="editSale(sale)"></i>
               </td>
+
             </tr>
             <!-- Add more rows dynamically -->
           </tbody>

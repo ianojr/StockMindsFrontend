@@ -8,6 +8,7 @@ export interface Stock {
     price: number;
     thumbnail?: string;
     description?: string;
+    low_stock_threshold: number;
     supplier?: {
       id: number;
       name: string;
